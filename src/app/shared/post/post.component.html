@@ -1,0 +1,83 @@
+<section class="post mb-4">
+  <section class="post-title">
+    <a href="#" [routerLink]="['/post', post.id]">
+      <h1 class="font-weight-bold text-uppercase">
+        {{post.title}}
+      </h1>
+    </a>
+  </section>
+
+  <section class="post-body">
+    <div class="pre-body">
+      <p>{{post.content}}</p>
+
+      <img [src]="post.imgSrc" class="img-fluid mb-2"/>
+
+      <!-- Este iframe está ubicado aquí solo para probar imágenes dentro de este marco -->
+      <!--
+      <iframe src="https://via.placeholder.com/2000x500/333333/444444" class="mb-2">
+      </iframe>
+      -->
+    </div>
+
+    <div class="continue-reading pt-1 pb-3" *ngIf="!showMore">
+      <a href="#" [routerLink]="['/post', post.id]" class="btn btn-block btn-black btn-lg text-uppercase font-weight-bold">
+        Seguir leyendo <i class="fas fa-angle-double-right"></i>
+      </a>
+    </div>
+
+    <div *ngIf="showMore">
+      <p>{{post.moreContent}}</p>
+
+      <div *ngIf="post.youtubeVideoId" class="mb-2">
+        <youtube-player [videoId]="post.youtubeVideoId" width="100%">
+        </youtube-player>
+      </div>
+
+      <p>{{post.moreContent}}</p>
+
+      <!-- Footer -->
+      <section class="post-footer">
+        <p>Aquí va el footer del post</p>
+      </section>
+    </div>
+  </section>
+
+  <div *ngIf="showMore">
+    <hr/>
+  </div>
+
+  <section class="post-meta">
+    <!-- Tags -->
+    <app-post-tags [tags]="post.tags"></app-post-tags>
+
+    <!-- Fila de datos meta -->
+    <div
+      class="d-flex justify-content-between align-items-center">
+      <div>{{post.date | date:'LLLL L, yyyy'}}<span *ngIf="showMore">, {{post.date | date:'HH:mm'}}</span></div>
+      <div class="post-meta-links">
+        <a href="#">
+          <i class="fas fa-heart fa-fw"></i> {{post.notes}}
+        </a>
+        <a href="#">
+          <i class="fas fa-retweet fa-fw"></i>
+        </a>
+        <a href="#">
+          <i class="fas fa-ellipsis-v fa-fw"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr />
+  </section>
+
+  <section class="post-interactions" *ngIf="showMore">
+    <!-- Comentarios -->
+    <app-post-comments></app-post-comments>
+
+    <hr />
+
+    <!-- Notas-->
+    <app-post-notes></app-post-notes>
+  </section>
+</section>

@@ -1,0 +1,19 @@
+.post-tags {
+  a {
+    &.post-tag {
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      transition: opacity 0.1s linear;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+

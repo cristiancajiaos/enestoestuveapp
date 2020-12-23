@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  font-family: 'Libre Franklin', 'Arial', 'sans-serif';
+}
+
+.btn-black {
+  color: #fff;
+  background-color: black;
+
+  &:hover {
+    color: darken(white, 35%);
+  }
+}
