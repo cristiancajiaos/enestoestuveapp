@@ -1,3 +1,5 @@
+@import '~src/assets/scss/styles.scss';
+
 .post {
   .post-title {
     a {
@@ -31,16 +33,11 @@
 
   .post-meta {
     .post-meta-links {
+      @include black-link;
+      
       a {
-        color: black;
-        text-decoration: none;
-
         &:not(:last-child) {
           margin-right: 0.5rem;
-        }
-
-        &:hover {
-          opacity: 0.5;
         }
       }
     }

@@ -1,9 +1,5 @@
-.social-networks {
-  a {
-    color: black;
+@import '~src/assets/scss/styles.scss';
 
-    &:hover {
-      opacity: 0.5;
-    }
-  }
+.social-networks {
+  @include black-link;
 }
