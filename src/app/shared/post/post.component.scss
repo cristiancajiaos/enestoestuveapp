@@ -1,4 +1,4 @@
-@import '~src/assets/scss/styles.scss';
+@import '~src/assets/scss/styles';
 
 .post {
   .post-title {
@@ -34,7 +34,7 @@
   .post-meta {
     .post-meta-links {
       @include black-link;
-      
+
       a {
         &:not(:last-child) {
           margin-right: 0.5rem;
