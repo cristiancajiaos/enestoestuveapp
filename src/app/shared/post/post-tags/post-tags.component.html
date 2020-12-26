@@ -1,4 +1,5 @@
 <div class="post-tags mb-3" *ngIf="tags">
+  <i class="fas fa-tag fa-fw"></i>
   <a href="#" class="post-tag" *ngFor="let tag of tags" [routerLink]="['/tag', setTagName(tag)]">
     #{{tag}}
   </a>
