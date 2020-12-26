@@ -1,0 +1,30 @@
+@mixin black-link {
+  a {
+    color: black;
+    text-decoration: none;
+    transition: opacity 0.1s linear;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+@mixin pagination {
+  .pagination {
+    ul {
+      padding-inline-start: 0;
+      text-transform: uppercase;
+
+      li {
+        &.current {
+          background-color: black;
+        }
+
+        a {
+          transition: background-color 0.1s linear;
+        }
+      }
+    }
+  }
+}
