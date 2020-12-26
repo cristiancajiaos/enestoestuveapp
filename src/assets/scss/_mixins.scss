@@ -10,6 +10,21 @@
   }
 }
 
-@mixin foo {
-  color: red;
+@mixin pagination {
+  .pagination {
+    ul {
+      padding-inline-start: 0;
+      text-transform: uppercase;
+
+      li {
+        &.current {
+          background-color: black;
+        }
+
+        a {
+          transition: background-color 0.1s linear;
+        }
+      }
+    }
+  }
 }

@@ -1,16 +1,6 @@
+@import '~src/assets/scss/styles';
+
 .main {
+  @include pagination;
   margin-bottom: 1rem;
-
-  .pagination {
-    ul {
-      padding-inline-start: 0;
-      text-transform: uppercase;
-
-      li {
-        &.current {
-          background-color: black;
-        }
-      }
-    }
-  }
 }
