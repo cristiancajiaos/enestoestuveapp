@@ -93,7 +93,7 @@ header {
     @include black-link;
   }
 
-  .footer-info {
+  .footer-into-header {
     @media screen and (max-width: 991px) {
       display: none;
     }

@@ -1,5 +1,24 @@
 @import '~src/assets/scss/styles';
 
-.social-networks {
-  @include black-link;
+.footer-info {
+  .author-profile {
+    img {
+      @media screen and (max-width: 991px) {
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+      }
+
+      @media screen and (min-width: 992px) {
+        width: 150px;
+        height: 150px;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+      }
+
+    }
+  }
+  .social-networks {
+    @include black-link;
+  }
 }

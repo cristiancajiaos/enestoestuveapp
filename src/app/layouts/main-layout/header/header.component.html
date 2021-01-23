@@ -43,15 +43,17 @@
            </li>
         </ul>
         <div class="header-bar"></div>
-        <div class="header-tools d-flex">
-          <a href="#" [routerLink]="['archive']" class="nav-link px-0" title="Archivo">
-            <i class="fas fa-lg fa-archive fa-fw"></i>
-          </a>
-          <a href="#" [routerLink]="['rss']" class="nav-link px-0" title="RSS">
-            <i class="fas fa-lg fa-rss fa-fw"></i>
-          </a>
+        <div class="header-tools">
+          <div class="d-flex align-items-center">
+            <a href="#" [routerLink]="['archive']" class="nav-link px-0" title="Archivo">
+              <i class="fas fa-lg fa-archive fa-fw"></i>
+            </a>
+            <a href="#" [routerLink]="['rss']" class="nav-link px-0" title="RSS">
+              <i class="fas fa-lg fa-rss fa-fw"></i>
+            </a>
+          </div>
         </div>
-        <div class="footer-info">
+        <div class="footer-into-header">
           <div class="header-bar mb-2"></div>
           <app-footer-info></app-footer-info>
         </div>
